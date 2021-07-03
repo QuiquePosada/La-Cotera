@@ -3,3 +3,5 @@ node_modules/
 public
 .env
 src/keys
+.DS_Store
+.package-lock.json
