@@ -1,48 +1,34 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby minimal starter
-</h1>
+This project was bootstrapped with [Create Contentful App](https://github.com/contentful/create-contentful-app).
 
-## 🚀 Quick start
+## Available Scripts
 
-1.  **Create a Gatsby site.**
+In the project directory, you can run:
 
-    Use the Gatsby CLI to create a new site, specifying the minimal starter.
+#### `npm start`
 
-    ```shell
-    # create a new Gatsby site using the minimal starter
-    npm init gatsby
-    ```
+Creates or updates your app definition in Contentful, and runs the app in development mode.
+Open your app to view it in the browser.
 
-2.  **Start developing.**
+The page will reload if you make edits.
+You will also see any lint errors in the console.
 
-    Navigate into your new site’s directory and start it up.
+#### `npm run build`
 
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
+Builds the app for production to the `build` folder.
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-3.  **Open the code and start customizing!**
+The build is minified and the filenames include the hashes.
+Your app is ready to be deployed!
 
-    Your site is now running at http://localhost:8000!
+## Libraries to use
 
-    Edit `src/pages/index.js` to see your site update in real-time!
+To make your app look and feel like Contentful use the following libraries:
 
-4.  **Learn more**
+- [Forma 36](https://f36.contentful.com/) – Contentful's design system
+- [Contentful Field Editors](https://www.contentful.com/developers/docs/extensibility/field-editors/) – Contentful's field editor React components
 
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+## Learn More
 
-    - [Tutorials](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+[Read more](https://www.contentful.com/developers/docs/extensibility/app-framework/create-contentful-app/) and check out the video on how to use the CLI.
 
-    - [Guides](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+Create Contentful App uses [Create React App](https://create-react-app.dev/). You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started) and how to further customize your app.
