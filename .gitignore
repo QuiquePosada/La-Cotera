@@ -5,3 +5,4 @@ public
 .DS_Store
 .package-lock.json
 tsconfig.json
+build/
