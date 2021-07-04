@@ -27,6 +27,7 @@ const Map = ({coordinates, html}) => {
         marker.setPopup(popup)
         // add marker to map
         marker.addTo(map)
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     return (

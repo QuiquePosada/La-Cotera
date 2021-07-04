@@ -55,7 +55,7 @@ const Sale = ({ pageContext, data }) => {
                 :
                 <Section subtitle="Por ahora no tenemos ganado en venta" title="Te invitamos a estar al pendiente, ó a contactarnos para recibir más información">
                     <div style={{ textAlign: 'center' }}>
-                        <a style={{ visibility: 'hidden' }} href="https://storyset.com/work" aria-label="Work illustrations by Storyset"></a>
+                        <a style={{ visibility: 'hidden', display: 'none' }} href="https://storyset.com/work" aria-label="Work illustrations by Storyset">Work illustrations by Storyset</a>
                         <StaticImage placeholder="tracedSVG" height={400} alt="No Data" src="../images/Empty-pana.png" />
                     </div>
                 </Section>
