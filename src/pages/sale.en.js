@@ -34,7 +34,7 @@ const Sale = ({ pageContext, data }) => {
 
     return (
         <Layout pageContext={pageContext} >
-            <Seo title={`Ganado | ${data.site.siteMetadata.title}`} />
+            <Seo title={`Cattle On Sale | ${data.site.siteMetadata.title}`} lang={pageContext.langKey} description={data.markdown.frontmatter.subtitle} />
             {/* Video Bg */}
             <div style={{ height: '40vh', backgroundColor: 'rgba(0,0,0,0.6)' }} className="overlay bgImgContainer">
                 <Container style={header}  >
@@ -80,6 +80,7 @@ export const query = graphql`
                         placeholder: BLURRED
                         resizingBehavior: THUMB
                         aspectRatio: 1.3333
+                        width: 600
                         )
                     }
                 }

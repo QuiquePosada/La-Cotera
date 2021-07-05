@@ -94,7 +94,7 @@ const IndexPage = ({ pageContext, data }) => {
     console.log("page context\t",pageContext)
     return(
         <Layout pageContext={pageContext}>
-            <Seo title={`Home | ${data.site.siteMetadata.title}`} />
+            <Seo title={`Home | ${data.site.siteMetadata.title}`} lang={pageContext.langKey} description={data.markdown.frontmatter.subtitle} />
             <div style={{height: '100vh', backgroundColor: 'rgba(0,0,0,0.45)'}} className='bgImgContainer overlay'>
                 <Container style={header} maxWidth='xs' >
                     <Fade cascade>
@@ -106,6 +106,7 @@ const IndexPage = ({ pageContext, data }) => {
                     className='bgImg'
                     placeholder='tracedSVG'
                     alt='BgImg1'
+                    loading="eager"
                 />
             </div>
             {/* about section */}
@@ -140,8 +141,8 @@ const IndexPage = ({ pageContext, data }) => {
                                                     We have <strong><u>{(new Date().getFullYear()) - (new Date("01/12/2006").getFullYear())}</u></strong>&nbsp;
                                                     years being the best breeder in Mexico
                                                 </p>
-                                                <Link style={{ textDecoration: 'none', marginBottom: '10px' }} to="/about">
-                                                    <Button variant="outlined" color="secondary">
+                                                <Link style={{ textDecoration: 'none' }} to="/about">
+                                                    <Button style={{marginBottom: '10px'}} variant="outlined" color="secondary">
                                                         { data.markdown.frontmatter.section_1.button1_Title }
                                                     </Button>
                                                 </Link>
@@ -176,7 +177,7 @@ const IndexPage = ({ pageContext, data }) => {
                             {
                                 data.data.edges.map((item) => (
                                     <Grid item xs={12} sm={6} md={4}>
-                                        <Link to={`${pageContext.slug}cows/${item.node.name.replace(/\s/g, '_').toLowerCase()}/`}>
+                                        <Link className="link" to={`${pageContext.slug}cows/${item.node.name.replace(/\s/g, '_').toLowerCase()}/`}>
                                             {/* this solution is temporary, a slug field will be added to contentful to avoid extra work */}
                                             <GatsbyImage image={item.node.image.gatsbyImageData} alt={item.node.name} imgStyle={{ borderRadius: '5px', height: '100%'}} />
                                             <div>
@@ -260,12 +261,13 @@ export const query = graphql`
                     name
                     sire
                     image {
-                    gatsbyImageData(
-                        layout: CONSTRAINED
-                        placeholder: BLURRED
-                        resizingBehavior: THUMB
-                        aspectRatio: 1.3333
-                        )
+                        gatsbyImageData(
+                            layout: CONSTRAINED
+                            placeholder: BLURRED
+                            resizingBehavior: THUMB
+                            aspectRatio: 1.3333
+                            width: 600
+                            )
                     }
                 }
             }

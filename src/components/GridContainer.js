@@ -34,7 +34,7 @@ const CowContainer = ({ data, langSlug="/", requiresPagination, itemsPerPage=18 
                                 <Grid item xs={12} sm={6} md={4}>
                                     {/* <GatsbyImage image={cow.src} alt={cow.alt} style={{ borderRadius: '5px'}} imgStyle={{ borderRadius: '5px'}} /> */}
                                     {/* <GatsbyImage image={cow.node.image.gatsbyImageData} alt={cow.alt} style={{ borderRadius: '5px'}} imgStyle={{ borderRadius: '5px'}} /> */}
-                                    <Link to={`${langSlug}${cow.node.name.replace(/\s/g, '_').toLowerCase()}/`}>
+                                    <Link className="link" to={`${langSlug}${cow.node.name.replace(/\s/g, '_').toLowerCase()}/`}>
                                         <GatsbyImage image={cow.node.image.gatsbyImageData} alt={cow.node.name} imgStyle={{ borderRadius: '5px'}} />
                                         <div>
                                             <h6 style={{ margin: 0, color: '#A6635D', fontFamily: 'Montserrat' }}>{cow.node.sire}</h6>
@@ -66,7 +66,7 @@ const CowContainer = ({ data, langSlug="/", requiresPagination, itemsPerPage=18 
                             <Grid item xs={12} sm={6} md={4}>
                                 {/* <GatsbyImage image={cow.src} alt={cow.alt} style={{ borderRadius: '5px'}} imgStyle={{ borderRadius: '5px'}} /> */}
                                 {/* <StaticImage src="../images/cows.jpg" alt={cow.alt} style={{ borderRadius: '5px'}} imgStyle={{ borderRadius: '5px'}} /> */}
-                                <Link to={`${langSlug}/${cow.node.name.replace(/\s/g, '_').toLowerCase()}/`}>
+                                <Link className="link" to={`${langSlug}/${cow.node.name.replace(/\s/g, '_').toLowerCase()}/`}>
                                     <GatsbyImage image={cow.node.image.gatsbyImageData} alt={cow.node.name} imgStyle={{ borderRadius: '5px'}} />
                                     <div>
                                         <h6 style={{ margin: 0, color: '#A6635D', fontFamily: 'Montserrat' }}>{cow.node.sire}</h6>

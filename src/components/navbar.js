@@ -91,7 +91,7 @@ const Navbar = (props) => {
             ))
         )
         return (
-            <Toolbar style={{ justifyContent: 'space-between' }}>
+            <Toolbar style={{ justifyContent: 'space-between', zIndex: 10 }}>
                 <div style={{display: 'flex', alignItems: 'center'}}>
                     <Link style={link} to={props.pageContext.langKey === "es" ? "/" : "/en"}>
                         <Button 

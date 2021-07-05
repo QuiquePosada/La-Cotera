@@ -131,7 +131,7 @@ const IndexPage = ({ pageContext, data }) => {
 
     return(
         <Layout pageContext={pageContext}>
-            <Seo title={`Inicio | ${data.site.siteMetadata.title}`}  />
+            <Seo title={`Inicio | ${data.site.siteMetadata.title}`} lang={pageContext.langKey} description={data.markdown.frontmatter.subtitle} />
             <div style={{height: '100vh', backgroundColor: 'rgba(0,0,0,0.45)'}} className='bgImgContainer overlay'>
                 <Container style={header} maxWidth='xs' >
                     <Fade cascade>
@@ -144,6 +144,7 @@ const IndexPage = ({ pageContext, data }) => {
                     placeholder="blurred"
                     // placeholder='tracedSVG'
                     alt='BgImg1'
+                    loading="eager"
                 />
             </div>
             
@@ -211,12 +212,11 @@ const IndexPage = ({ pageContext, data }) => {
             <Fade direction="bottom" triggerOnce>
                 <Section title={data.markdown.frontmatter.section_2.title} subtitle={data.markdown.frontmatter.section_2.subtitle} description={data.markdown.frontmatter.section_2.description}>
                     <div style={{ padding: 20 }}>
-                        {console.log("Da cows\t",data.data)}
                         <Grid container spacing={5}>
                             {
                                 data.data.edges.map((item) => (
                                     <Grid item xs={12} sm={6} md={4}>
-                                        <Link to={`${pageContext.slug}cows/${item.node.name.replace(/\s/g, '_').toLowerCase()}/`}>
+                                        <Link className="link" to={`${pageContext.slug}cows/${item.node.name.replace(/\s/g, '_').toLowerCase()}/`}>
                                             <GatsbyImage image={item.node.image.gatsbyImageData} alt={item.node.name} imgStyle={{ borderRadius: '5px', height: '100%'}} />
                                             <div>
                                                 <h6 style={{ margin: 0, color: '#A6635D', fontFamily: 'Montserrat', marginTop: 5 }}>{item.node.sire}</h6>
@@ -299,13 +299,14 @@ export const query = graphql`
                     name
                     sire
                     image {
-                    gatsbyImageData(
-                        layout: CONSTRAINED
-                        placeholder: BLURRED
-                        resizingBehavior: THUMB
-                        aspectRatio: 1.3333
-                        )
-                    }
+                        gatsbyImageData(
+                            layout: CONSTRAINED
+                            placeholder: BLURRED
+                            resizingBehavior: THUMB
+                            aspectRatio: 1.3333,
+                            width: 600
+                            )
+                        }
                 }
             }
         }

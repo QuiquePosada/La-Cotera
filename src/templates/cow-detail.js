@@ -21,12 +21,12 @@ const Detail = ({ pageContext, data }) => {
     },[])
     return (
         <Layout pageContext={pageContext}>
-            <Seo />
+            <Seo title={data.cow.name} lang={pageContext.langKey} description={data.cow.body ? {__html: data.cow.body.body} : null} />
             <div style={mobileView ? null : { marginTop: '64px' }} />
             <Section headerStyle={mobileView ? {paddingTop: '40px'} : null} title={data.cow.name} subtitle={data.cow.sire} description={data.cow.dam ? data.cow.dam.join(", ") : data.cow.dam}>
-                <p>{data.cow.body ? data.cow.body.body : null}</p>
+                <p dangerouslySetInnerHTML={data.cow.body ? {__html: data.cow.body.body} : null}></p>
                 {/* Gallery */}
-                <GatsbyImage image={data.cow.image.gatsbyImageData} /*style={{width: '100%', height: '80vh'}}*/ />
+                <GatsbyImage image={data.cow.image.gatsbyImageData} alt={data.cow.image.title} /*style={{width: '100%', height: '80vh'}}*/ />
                 {/* Information about the cow */}
                 <div style={{padding: 16, textAlign: 'center'}}>
                     <GridList cellHeight={260} cols={3} spacing={4}>
@@ -63,6 +63,7 @@ export const query = graphql`
             sire
             image {
               gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
+              title
             }
             multImg {
                 gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)

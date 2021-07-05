@@ -15,6 +15,15 @@ module.exports = {
       },
     },
     {
+      resolve: "gatsby-plugin-nprogress",
+      options: {
+        // Setting a color is optional
+        color: "#F2F2F2",
+        // Disable/Show the loading spinner
+        showSpinner: true,
+      },
+    },
+    {
       resolve: "gatsby-plugin-i18n",
       options: {
         langKeyDefault: "es",
@@ -33,23 +42,23 @@ module.exports = {
         name: "Sta. Maria La Cotera",
         short_name: "La Cotera",
         start_url: "/",
-        lang: `es`,
-        background_color: `#483b3a`,
-        theme_color: `#483b3a`,
+        lang: "es",
+        background_color: "#483b3a",
+        theme_color: "#483b3a",
         icon: "src/images/icon.png",
       },
     },
     "gatsby-transformer-remark",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: "images",
-        path: "./src/images/",
-      },
-      __key: "images",
-    },
+    // {
+    //   resolve: "gatsby-source-filesystem",
+    //   options: {
+    //     name: "images",
+    //     path: "./src/images/",
+    //   },
+    //   __key: "images",
+    // },
     {
       resolve: "gatsby-source-filesystem",
       options: {

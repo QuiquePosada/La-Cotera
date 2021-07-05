@@ -14,7 +14,7 @@
 }
 @font-face {
     font-family: "Montserrat";
-    src: url("../../static/fonts/Montserrat/Montserrat-Medium.ttf");
+    src: url("../../static/fonts/Montserrat/Montserrat-Medium.ttf")format("truetype");
 }
 
 html{
@@ -26,11 +26,11 @@ body {
 }
 
 h1 {
-    font-family: "Dancing Script";
+    font-family: "Dancing Script", "Brush Script", Helvetica, sans-serif;
 }
 
 h2,h3,p {
-    font-family: "Montserrat";
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
 }
 
 /* Overlay */
@@ -69,6 +69,14 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+
+.link {
+    text-decoration-color: #403E3D;
+}
+
+.link:hover {
+    text-decoration-color: #732F2F;
 }
 
 .mapboxgl-popup {

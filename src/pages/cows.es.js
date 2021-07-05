@@ -33,7 +33,7 @@ const CowPage = ({ pageContext, data }) => {
 
     return (
         <Layout pageContext={pageContext} >
-            <Seo title={`Ganado | ${data.site.siteMetadata.title}`} />
+            <Seo title={`Ganado | ${data.site.siteMetadata.title}`} lang={pageContext.langKey} description={data.markdown.frontmatter.subtitle} />
             {/* Video Bg */}
             <div style={{ height: '40vh', backgroundColor: 'rgba(0,0,0,0.6)' }} className="overlay bgImgContainer">
                 <Container style={header}  >
@@ -63,13 +63,14 @@ export const query = graphql`
                     name
                     sire
                     image {
-                    gatsbyImageData(
-                        layout: CONSTRAINED
-                        placeholder: BLURRED
-                        resizingBehavior: THUMB
-                        aspectRatio: 1.3333
-                        )
-                    }
+                        gatsbyImageData(
+                            layout: CONSTRAINED
+                            placeholder: BLURRED
+                            resizingBehavior: THUMB
+                            aspectRatio: 1.3333
+                            width: 600
+                            )
+                        }
                 }
             }
         }
