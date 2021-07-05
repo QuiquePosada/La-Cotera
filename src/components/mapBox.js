@@ -3,7 +3,7 @@ import mapboxgl from 'mapbox-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
 import keys from '../config/keys'
 
-mapboxgl.accessToken = keys.MAPBOX_TOKEN
+mapboxgl.accessToken = keys.GATSBY_MAPBOX_TOKEN
 console.log("in the mapbox, these are the keys\t",keys)
 const Map = ({coordinates, html}) => {
     const mapContainer = useRef(null)
