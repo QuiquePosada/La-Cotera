@@ -43,9 +43,7 @@ const Detail = ({ pageContext, data }) => {
                             null
                         }
                     </GridList>
-                </div>
-                
-                {console.log("my data\t",data.cow)}
+                </div>                
             </Section>
         </Layout>
     )

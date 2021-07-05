@@ -91,7 +91,6 @@ const IndexPage = ({ pageContext, data }) => {
     const [email,setEmail] = useState("")
     const [messageBody, setMessageBody] = useState("")
     const mapHTML = '<div style="text-align: center"><h1>Sta. Maria La Cotera Farm</h1><h4><a style="color: #732F2F" href="https://goo.gl/maps/i2dZmL4nukFntMNy8">Open in Google Maps</a></h4></div>'
-    console.log("page context\t",pageContext)
     return(
         <Layout pageContext={pageContext}>
             <Seo title={`Home | ${data.site.siteMetadata.title}`} lang={pageContext.langKey} description={data.markdown.frontmatter.subtitle} />
