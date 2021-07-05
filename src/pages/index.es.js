@@ -215,7 +215,7 @@ const IndexPage = ({ pageContext, data }) => {
                         <Grid container spacing={5}>
                             {
                                 data.data.edges.map((item) => (
-                                    <Grid item xs={12} sm={6} md={4}>
+                                    <Grid item xs={12} sm={6} md={4} key={item.node.name}>
                                         <Link className="link" to={`${pageContext.slug}cows/${item.node.name.replace(/\s/g, '_').toLowerCase()}/`}>
                                             <GatsbyImage image={item.node.image.gatsbyImageData} alt={item.node.name} imgStyle={{ borderRadius: '5px', height: '100%'}} />
                                             <div>

@@ -4,6 +4,7 @@ import 'mapbox-gl/dist/mapbox-gl.css'
 import keys from '../config/keys'
 
 mapboxgl.accessToken = keys.MAPBOX_TOKEN
+console.log("in the mapbox, these are the keys\t",keys)
 const Map = ({coordinates, html}) => {
     const mapContainer = useRef(null)
     const { longitude, latitude } = coordinates

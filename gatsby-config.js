@@ -1,5 +1,6 @@
 // require("dotenv").config()
 const keys = require("./src/config/keys")
+console.log("\nthese are my build keys\t",keys,"\n\n")
 module.exports = {
   siteMetadata: {
     title: "La Cotera",
