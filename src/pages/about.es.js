@@ -73,6 +73,7 @@ const About = ({ pageContext, data }) => {
                     imgStyle={{objectPosition: 'top'}}
                     // placeholder='tracedSVG'
                     alt='BgImg1'
+                    layout="fullWidth"
                 />
             </div>
             <Section>
@@ -104,15 +105,15 @@ const About = ({ pageContext, data }) => {
                                 const space = Math.random() < 0.15
                                 return(
                                     // <GridListTile cols={index % 9 === 0 || index === 0 ? 2 : 1}>
-                                        <GridListTile style={{borderRadius: '10px'}} cols={(space || index === 0) && (numCols > 1) ? 2 : 1} >
-                                                <GatsbyImage image={tile.node.image.gatsbyImageData} alt={tile.node.name} />
-                                                <GridListTileBar
-                                                    title={tile.node.name}
-                                                    titlePosition="bottom"
-                                                    // className={classes.titleBar}
-                                                    style={{backgroundColor: 'rgb(64, 62, 61, 0.45)', fontFamily: 'Montserrat'}}
-                                                />
-                                        </GridListTile>
+                                    <GridListTile style={{borderRadius: '10px'}} cols={(space || index === 0) && (numCols > 1) ? 2 : 1} >
+                                        <GatsbyImage image={tile.node.image.gatsbyImageData} alt={tile.node.name} />
+                                        <GridListTileBar
+                                            title={tile.node.name}
+                                            titlePosition="bottom"
+                                            // className={classes.titleBar}
+                                            style={{backgroundColor: 'rgb(64, 62, 61, 0.45)', fontFamily: 'Montserrat'}}
+                                        />
+                                    </GridListTile>
                                 )
                             })
                         }

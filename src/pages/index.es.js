@@ -145,6 +145,7 @@ const IndexPage = ({ pageContext, data }) => {
                     // placeholder='tracedSVG'
                     alt='BgImg1'
                     loading="eager"
+                    layout="fullWidth"
                 />
             </div>
             
@@ -157,7 +158,7 @@ const IndexPage = ({ pageContext, data }) => {
                                 <Grid item xs={12} sm={6} md={4} >
                                     {/* <Fade style={paper} triggerOnce direction="left" > */}
                                         <Paper style={paper}>
-                                            <StaticImage src="../images/pasture.jpg" alt="logo" style={paperImg} imgStyle={paperImg} />
+                                            <StaticImage src="../images/pasture.jpg" layout="constrained" alt="logo" style={paperImg} imgStyle={paperImg} />
                                             <div style={{margin: '0 15px'}}>
                                                 <h2 style={paperTitle}>¿Quienes Somos?</h2>
                                                 <p>En Santa María La Cotera nos dedicamos a la <u><strong>crianza</strong></u>, <u><strong>comercialización</strong></u> y <u><strong>explotación</strong></u> del ganado lechero</p>
@@ -170,7 +171,7 @@ const IndexPage = ({ pageContext, data }) => {
                                 <Grid item xs={12} sm={6} md={4} >
                                     {/* <Fade style={paper} triggerOnce direction="left" delay={500}> */}
                                         <Paper style={paper}>
-                                            <StaticImage src="../images/enhancedHistory.jpg" alt="logo" style={paperImg} imgStyle={paperImg} />
+                                            <StaticImage src="../images/enhancedHistory.jpg" layout="constrained" alt="logo" style={paperImg} imgStyle={paperImg} />
                                             <div style={{margin: '0 15px'}}>
                                                 <h2 style={paperTitle}>Nuestra Historia</h2>
                                                 <p>Somos criadores de ganado de registro desde <u><strong>1973</strong></u></p>
@@ -192,7 +193,7 @@ const IndexPage = ({ pageContext, data }) => {
                                 <Grid item xs={12} sm={6} md={4} >
                                     {/* <Fade style={paper} triggerOnce direction="left" delay={1000}> */}
                                         <Paper style={paper}>
-                                            <StaticImage src="../images/cows.jpg" alt="logo" style={paperImg} imgStyle={paperImg} />
+                                            <StaticImage src="../images/cows.jpg" layout="constrained" alt="logo" style={paperImg} imgStyle={paperImg} />
                                             <div style={{margin: '0 15px'}}>
                                                 <h2 style={paperTitle}>Principales Productos y Servicios</h2>
                                                 <p>Importación de ganado de E.U, Canadá y otras zonas lecheras mundiales</p>

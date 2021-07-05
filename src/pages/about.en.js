@@ -9,6 +9,7 @@ import { Fade } from 'react-awesome-reveal'
 import Grid from '@material-ui/core/Grid'
 import GridList from '@material-ui/core/GridList'
 import GridListTile from '@material-ui/core/GridListTile'
+import GridListTileBar from '@material-ui/core/GridListTileBar'
 
 const header = {
     display: 'flex', 
@@ -105,6 +106,12 @@ const About = ({ pageContext, data }) => {
                                     // <GridListTile cols={index % 9 === 0 || index === 0 ? 2 : 1}>
                                     <GridListTile style={{borderRadius: '10px'}} cols={(space || index === 0) && (numCols > 1) ? 2 : 1} >
                                         <GatsbyImage image={tile.node.image.gatsbyImageData} alt={tile.node.name} />
+                                        <GridListTileBar
+                                            title={tile.node.name}
+                                            titlePosition="bottom"
+                                            // className={classes.titleBar}
+                                            style={{backgroundColor: 'rgb(64, 62, 61, 0.45)', fontFamily: 'Montserrat'}}
+                                        />
                                     </GridListTile>
                                 )
                             })

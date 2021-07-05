@@ -107,6 +107,7 @@ const IndexPage = ({ pageContext, data }) => {
                     placeholder='tracedSVG'
                     alt='BgImg1'
                     loading="eager"
+                    layout="fullWidth"
                 />
             </div>
             {/* about section */}
@@ -118,7 +119,7 @@ const IndexPage = ({ pageContext, data }) => {
                                 <Grid item xs={12} sm={6} md={4} >
                                     {/* <Fade style={paper} triggerOnce direction="left" > */}
                                         <Paper style={paper}>
-                                            <StaticImage src="../images/pasture.jpg" alt="logo" style={paperImg} imgStyle={paperImg} />
+                                            <StaticImage src="../images/pasture.jpg" layout="constrained" alt="logo" style={paperImg} imgStyle={paperImg} />
                                             <div style={{margin: '0 15px'}}>
                                                 <h2 style={paperTitle}>Who are we?</h2>
                                                 <p>
@@ -133,7 +134,7 @@ const IndexPage = ({ pageContext, data }) => {
                                 <Grid item xs={12} sm={6} md={4} >
                                     {/* <Fade style={paper} triggerOnce direction="left" delay={500}> */}
                                         <Paper style={paper}>
-                                            <StaticImage src="../images/enhancedHistory.jpg" alt="logo" style={paperImg} imgStyle={paperImg} />
+                                            <StaticImage src="../images/enhancedHistory.jpg" layout="constrained" alt="logo" style={paperImg} imgStyle={paperImg} />
                                             <div style={{margin: '0 15px'}}>
                                                 <h2 style={paperTitle}>Our History</h2>
                                                 <p>We have been record breeders since <strong><u>1973</u></strong></p>
@@ -153,7 +154,7 @@ const IndexPage = ({ pageContext, data }) => {
                                 <Grid item xs={12} sm={6} md={4} >
                                     {/* <Fade style={paper} triggerOnce direction="left" delay={1000}> */}
                                         <Paper style={paper}>
-                                            <StaticImage src="../images/cows.jpg" alt="logo" style={paperImg} imgStyle={paperImg} />
+                                            <StaticImage src="../images/cows.jpg" layout="constrained" alt="logo" style={paperImg} imgStyle={paperImg} />
                                             <div style={{margin: '0 15px'}}>
                                                 <h2 style={paperTitle}>Products and Services Offered</h2>
                                                 <p>Importing cattle from the U.S, Canada and other world dairy zones</p>
