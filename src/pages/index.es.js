@@ -278,7 +278,7 @@ const IndexPage = ({ pageContext, data }) => {
                             </Button>
                         </Grid>
                         <Grid item xs={12} sm={6} >
-                            {/* <Map coordinates={coordinates} html={mapHTML} /> */}
+                            <Map coordinates={coordinates} html={mapHTML} />
                         </Grid>
                     </Grid>
                 </Section>
