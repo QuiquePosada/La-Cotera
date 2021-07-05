@@ -128,9 +128,6 @@ const IndexPage = ({ pageContext, data }) => {
     
 
     const mapHTML = '<div style="text-align: center"><h1>Rancho Sta. Maria La Cotera</h1><h4><a style="color: #732F2F" href="https://goo.gl/maps/i2dZmL4nukFntMNy8">Abrir en Google Maps</a></h4></div>'
-
-    console.log("This is the process\t",process)
-    console.log("this is process env\t",process.env)
     return(
         <Layout pageContext={pageContext}>
             <Seo title={`Inicio | ${data.site.siteMetadata.title}`} lang={pageContext.langKey} description={data.markdown.frontmatter.subtitle} />

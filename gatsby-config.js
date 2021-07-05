@@ -1,4 +1,5 @@
-require("dotenv").config()
+// require("dotenv").config()
+const keys = require("./src/config/keys")
 module.exports = {
   siteMetadata: {
     title: "La Cotera",
@@ -9,8 +10,8 @@ module.exports = {
     {
       resolve: "gatsby-source-contentful",
       options: {
-        accessToken: process.env.CONTENTFUL_DELIVERY_API,
-        spaceId: process.env.SPACE_ID,
+        accessToken: keys.CONTENTFUL_DELIVERY_API,
+        spaceId: keys.SPACE_ID,
         // downloadLocal: true
       },
     },
