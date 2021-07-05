@@ -1,4 +1,5 @@
 // used as a good practice/reminder for future projects (this one only needs one set of keys)
+require("dotenv").config()
 module.exports = {
     SPACE_ID: process.env.SPACE_ID,
     CONTENTFUL_DELIVERY_API: process.env.CONTENTFUL_DELIVERY_API,
