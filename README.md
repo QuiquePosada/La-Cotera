@@ -7,6 +7,8 @@
   Sta. Maria La Cotera
 </h1>
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/914c4152-f207-448b-8daf-1aed16b146af/deploy-status)](https://app.netlify.com/sites/awesome-austin-80e814/deploys)
+
 ## Landing site for Sta. Maria La Cotera
 This repo contains a business website that is built with [Gatsby](https://www.gatsbyjs.org/), and [Contentful](https://www.contentful.com).
 
