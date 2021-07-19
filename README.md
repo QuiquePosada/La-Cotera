@@ -1,13 +1,19 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
+<p align="center" >
+  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter" >
+    <img alt="Gatsby" src="./src/images/logo.jpg" width="200" />
   </a>
 </p>
 <h1 align="center">
-  Gatsby minimal starter
+  Sta. Maria La Cotera
 </h1>
 
-## 🚀 Quick start
+## Landing site for Sta. Maria La Cotera
+This repo contains a business website that is built with [Gatsby](https://www.gatsbyjs.org/), and [Contentful](https://www.contentful.com).
+
+It follows the [JAMstack architecture](https://jamstack.org) by using Git as a single source of truth, and [Netlify](https://www.netlify.com) for continuous deployment, and CDN distribution.
+
+
+<!-- ## 🚀 Quick start
 
 1.  **Create a Gatsby site.**
 
@@ -45,4 +51,4 @@
 
     - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
 
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter) -->
