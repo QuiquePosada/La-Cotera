@@ -1,5 +1,5 @@
 <p align="center" >
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter" >
+  <a href="https://www.lacotera.com.mx" >
     <img alt="Gatsby" src="./src/images/logo.jpg" width="200" />
   </a>
 </p>
@@ -16,7 +16,7 @@ It follows the [JAMstack architecture](https://jamstack.org) by using Git as a s
 
 
 <!-- ## 🚀 Quick start
-
+https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter
 1.  **Create a Gatsby site.**
 
     Use the Gatsby CLI to create a new site, specifying the minimal starter.
