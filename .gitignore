@@ -1,0 +1,8 @@
+node_modules/
+.cache/
+public
+.env
+src/config/dev.js
+.DS_Store
+package-lock.json
+.env.production

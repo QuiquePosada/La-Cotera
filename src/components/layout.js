@@ -1,0 +1,121 @@
+import React from 'react'
+import { graphql, useStaticQuery } from 'gatsby'
+import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles'
+import Navbar from './navbar'
+import Footer from './footer'
+
+/**
+ * section data for each language (spanish & english)
+ */
+const sectionData_es = [
+    {
+        label: "Nosotros",
+        // href: "/us"
+        href: "/about"
+    },
+    {
+        label: "Conoce nuestro ganado",
+        href: null,
+        dropdown: [
+            {
+                label: "Ganado en Venta",
+                // href: "/cows"
+                href: "/sale"
+
+            },
+            // {
+            //     label: "Grandes Vacas",
+            //     // href: "/greatest_cows"
+            //     href: "/"
+
+            // },
+            {
+                label: "Ganado",
+                // href: "/cows"
+                href: "/cows"
+            },
+        ]
+    },
+    {
+        label: "Contáctanos",
+        // href: "/"
+        href: "/#contactForm"
+
+    },
+]
+
+const sectionData_en = [
+    {
+        label: "About Us",
+        // href: "/en/us"
+        href: "/en/about"
+
+    },
+    {
+        label: "Get to know our Cattle",
+        href: null,
+        dropdown: [
+            {
+                label: "Cows on Sale",
+                // href: "/cows"
+                href: "/en/sale"
+
+            },
+            // {
+            //     label: "Greatest Cows",
+            //     // href: "/en/greatest_cows"
+            //     href: "/en/"
+
+            // },
+            {
+                label: "Cattle",
+                // href: "/en/cows"
+                href: "/en/cows"
+
+            }
+        ]
+    },
+    {
+        label: "Contact Us",
+        // href: "/"
+        href: "/en/#contactForm"
+
+    },
+]
+
+const theme = createMuiTheme({
+    palette: {
+        primary: {
+            main: '#F2F2F2',
+        },
+        secondary: {
+            main: '#732F2F',
+        },
+    },
+  })
+
+const Layout = ({ children, pageContext }) => {
+    const staticQuery = useStaticQuery(graphql`
+        query {
+            site {
+                siteMetadata {
+                    title
+                }
+            }
+        }
+    `)
+    const otherLangPath = pageContext.langKey === "es" ? ("/en" + pageContext.slug) : pageContext.slug.slice(3)
+        // retrieves the current site by concatenating the 'en' extension if the current language is spanish, or slices the string to delete the 'en' extension for spanish
+
+    return(
+        <ThemeProvider theme={theme}>
+            <Navbar title={staticQuery.site.siteMetadata.title} otherLangPath={otherLangPath} sectionData={pageContext.langKey === "es" ? sectionData_es : sectionData_en} pageContext={pageContext} />
+            <main>
+                { children }
+            </main>
+            <Footer title={staticQuery.site.siteMetadata.title} sectionData={pageContext.langKey === "es" ? sectionData_es : sectionData_en} pageContext={pageContext} />
+        </ThemeProvider>
+    )
+}
+
+export default Layout

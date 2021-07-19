@@ -1,0 +1,84 @@
+/* 
+    Color Palette
+    #732F2F
+    #A6635D
+    #A6837B
+    #403E3D
+    #F2F2F2
+*/
+
+/* Google Fonts */
+@font-face {
+    font-family: "Dancing Script";
+    src: url("../../static/fonts/Dancing_Script/DancingScript-VariableFont_wght.ttf")format("truetype");
+}
+@font-face {
+    font-family: "Montserrat";
+    src: url("../../static/fonts/Montserrat/Montserrat-Medium.ttf")format("truetype");
+}
+
+html{
+    background-color: #732F2F;
+}
+
+body {
+    margin: 0;
+}
+
+h1 {
+    font-family: "Dancing Script", "Brush Script", Helvetica, sans-serif;
+}
+
+h2,h3,p {
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+}
+
+/* Overlay */
+.overlay {
+    background-color: rgba(0,0,0,0.2);
+    height: 100%;
+}
+
+/* Sending Images as Background */
+.bgImgContainer {
+    /* display: inline-block!important; */
+    display: flex!important;
+    /* overflow: hidden; */
+    position: relative!important;
+    width: 100%!important;
+    
+    /* Needed to prevent weird scrolling on safari */
+    background-repeat: no-repeat;
+    background-size: cover;
+    backface-visibility: hidden;
+    overflow: hidden;
+}
+
+.bgImg {
+    position: absolute!important;
+    left: 0!important;
+    top: 0!important;
+    width: 100%!important;
+    height: 100%!important;
+    z-index: -1!important;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.link {
+    text-decoration-color: #403E3D;
+}
+
+.link:hover {
+    text-decoration-color: #732F2F;
+}
+
+.mapboxgl-popup {
+    max-width: 500px;
+}
