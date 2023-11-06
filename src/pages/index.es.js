@@ -161,6 +161,9 @@ const IndexPage = ({ pageContext, data }) => {
                                             <div style={{margin: '0 15px'}}>
                                                 <h2 style={paperTitle}>¿Quienes Somos?</h2>
                                                 <p>En Santa María La Cotera nos dedicamos a la <u><strong>crianza</strong></u>, <u><strong>comercialización</strong></u> y <u><strong>explotación</strong></u> del ganado lechero</p>
+                                                <p>Nos enorgullece ser la única fuente autorizada en México para la venta de Blondin Sires</p>
+                                                {/* NOTE: Leads directly to a specific pdf catalogue */}
+                                                {/* <a href='https://heyzine.com/flip-book/cc71985138.html'></a> */}
                                             </div>
                                         </Paper>
                                     {/* </Fade> */}
@@ -199,6 +202,13 @@ const IndexPage = ({ pageContext, data }) => {
                                                 <p>Importación de embriones y sementales de las mejores familias en Norte America</p>
                                                 <p>Comercialización de ganado nacional</p>
                                                 <p>Crianza de vacas para exposición y concurso para motivar y mejorar la genética a nivel nacional</p>
+                                                {/* Leads to Blondin Sire website, where they take care in updating the catalogue with no intervention from this side */}
+                                                <p>Garantizamos la autenticidad de ejemplares de <i>Blondin</i> y poder dar facilitar el acceso a la mejor calidad disponible</p>
+                                                <p>Ponemos a disposicion ejemplares de Blondin para mejorar la calidad de su ganado</p>
+                                                <p>Le invitamos a consultar el catálogo en linea de <i><a style={{ color: '#732F2F' }} href="https://www.blondinsires.com/the-bulls">Blondin Sires</a></i>, y contactarnos si tiene alguna pregunta o interes en algun ejemplar</p>
+                                                <Link to="https://www.blondinsires.com/the-bulls" >
+                                                    <StaticImage src="../images/blondin.png" style={{margin: "5% 20%"}} layout="constrained" alt="blondin-logo" />    
+                                                </Link>
                                             </div>
                                         </Paper>
                                     {/* </Fade> */}

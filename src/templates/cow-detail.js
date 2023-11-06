@@ -25,16 +25,14 @@ const Detail = ({ pageContext, data }) => {
             <Seo title={data.cow.name} lang={pageContext.langKey} description={data.cow.body ? {__html: data.cow.body.body} : null} />
             <div style={mobileView ? null : { marginTop: '64px' }} />
             <Section headerStyle={mobileView ? {paddingTop: '40px'} : null} title={data.cow.name} subtitle={data.cow.sire} description={data.cow.dam ? data.cow.dam.join(", ") : data.cow.dam}>
-                <p dangerouslySetInnerHTML={data.cow.body ? {__html: data.cow.body.body} : null}></p>
+                <p style={{ paddingLeft: '5em' }} dangerouslySetInnerHTML={data.cow.body ? {__html: data.cow.body.body} : null}></p>
                 {/* Gallery */}
                 <div style={{ maxWidth: '68em', marginLeft: 'auto', marginRight: 'auto' }}>
                     <GatsbyImage image={data.cow.image.gatsbyImageData} alt={data.cow.image.title} />
                 </div>
-                {/* <GatsbyImage image={data.cow.image.gatsbyImageData} alt={data.cow.image.title} style={{maxHeight: '75vh' }} imgStyle={{maxHeight: '75vh', marginLeft: 'auto', marginRight: 'auto'}}  /> */}
                 {/* Information about the cow */}
                 <div style={{padding: 16, textAlign: 'center'}}>
                     <GridList style={{ justifyContent: 'center' }} cellHeight={'auto'} cols={3} spacing={4}>
-                        {/* xs=12, sm=6, rest be 3  */}
                         {
                             data.cow.multImg
                             ?

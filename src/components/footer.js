@@ -31,7 +31,10 @@ const Footer = ({ sectionData, title, pageContext, otherLangPath }) => {
                             section.href === null ?
                                 section.dropdown.map((subSection,index) => (
                                     <Link key={index} style={{...link,textDecoration: 'none'}} to={subSection.href}>
-                                        {subSection.label}  
+                                        <div style={{display: "flex", alignItems: "center"}}>
+                                            {subSection.label}
+                                            {subSection?.img}
+                                        </div>
                                     </Link>
                                 ))
                                 :

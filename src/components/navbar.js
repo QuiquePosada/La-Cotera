@@ -78,6 +78,7 @@ const Navbar = (props) => {
                             { section.dropdown.map((subSection,index) =>(
                                 <MenuItem key={index} component={Link} to={subSection.href} onClick={handleClose}>
                                    { subSection.label }
+                                   { subSection?.img }
                                 </MenuItem>
                             ))}
                         </Menu>
@@ -108,12 +109,12 @@ const Navbar = (props) => {
                 <div>
                     <Link to={props.pageContext.langKey === "en" ? props.otherLangPath : props.pageContext.slug} className="langBtn">
                         <Button color="primary" >
-                            <strong>ES</strong>
+                            <strong>ES 🇲🇽</strong>
                         </Button>
                     </Link>
                     <Link to={props.pageContext.langKey === "es" ? props.otherLangPath : props.pageContext.slug} className="langBtn">
                         <Button color="primary">
-                            <strong>EN</strong>
+                            <strong>EN 🇺🇸</strong>
                         </Button>
                     </Link>
                     <IconButton href="https://www.facebook.com/santamarialacotera" style={{color: 'white'}} aria-label={props.pageContext.langKey === "es" ? "Siguenos en Facebook" : "Follow us on Facebook"} >
@@ -151,6 +152,7 @@ const Navbar = (props) => {
                             { section.dropdown.map((subSection,index) =>(
                                 <MenuItem key={index} component={Link} to={subSection.href} onClick={handleClose}>
                                     { subSection.label }
+                                    { subSection?.img }
                                 </MenuItem>
                             ))}
                         </Menu>
@@ -169,10 +171,10 @@ const Navbar = (props) => {
                 </IconButton>
                 <div className="mobileItem">
                     <MenuItem className="langBtn" component={Link} to={props.pageContext.langKey === "en" ? props.otherLangPath : props.pageContext.slug}>
-                        <strong>ES</strong>
+                        <strong>ES 🇲🇽</strong>
                     </MenuItem>
                     <MenuItem className="langBtn" component={Link} to={props.pageContext.langKey === "es" ? props.otherLangPath : props.pageContext.slug}>
-                        <strong>EN</strong>
+                        <strong>EN 🇺🇸</strong>
                     </MenuItem>
                 </div>
                 <MenuItem style={{textTransform: 'uppercase', fontSize: '1.5em'}} className="mobileItem" component={Link} to={props.pageContext.langKey === "es" ? "/" : "/en"}>
@@ -183,8 +185,6 @@ const Navbar = (props) => {
     }
 
     const displayNavbar = () => {
-        // console.log("STATE\t",state)
-        // console.log("MOBILE ?\t",mobileView!=null)
         if (mobileView != null){
             return mobileView === true ? displayMobile() : displayDesktop()
         }

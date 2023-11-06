@@ -127,6 +127,7 @@ const IndexPage = ({ pageContext, data }) => {
                                                     <strong><u>commercializing</u></strong>, and <strong><u>bringing the best</u></strong> from the&nbsp; 
                                                     most important breeds from dairy cattle
                                                 </p>
+                                                <p>We are proud to be the only authorized source in Mexico for the sale of Blondin Sires</p>
                                             </div>
                                         </Paper>
                                     {/* </Fade> */}
@@ -161,6 +162,13 @@ const IndexPage = ({ pageContext, data }) => {
                                                 <p>Importing of embryons and stallions from the best families across North America</p>
                                                 <p>Commercialization of mexican cattle</p>
                                                 <p>Breeding of cows for exhibition and competition in order to improve genetics in Mexico's dairy cattle</p>
+                                                {/* Leads to Blondin Sire website, where they take care in updating the catalogue with no intervention from this side */}
+                                                <p>We guarantee the authenticity of Blondin specimens and can provide access to the best quality available</p>
+                                                <p>We make Blondin specimens available to improve the quality of your cattle</p>
+                                                <p>We invite you to consult the online catalog of <i><a style={{ color: '#732F2F' }} href="https://www.blondinsires.com/the-bulls">Blondin Sires</a></i>, and contact us if you have any questions or interest in any specimen</p>
+                                                <Link to="https://www.blondinsires.com/the-bulls" >
+                                                    <StaticImage src="../images/blondin.png" style={{margin: "5% 20%"}} layout="constrained" alt="blondin-logo" />    
+                                                </Link>
                                             </div>
                                         </Paper>
                                     {/* </Fade> */}
